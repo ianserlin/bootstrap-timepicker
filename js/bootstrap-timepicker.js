@@ -28,7 +28,7 @@
     this.template = options.template;
     this.appendWidgetTo = options.appendWidgetTo;
     this.containingClass = options.containingClass || 'input-group';
-    this.addOnClass = options.addOnClass || 'input-group-addon';
+    this.addOnClass = options.addOnSelector || '.input-group-addon';
 
     this._init();
   };
@@ -41,7 +41,7 @@
       var self = this;
 
       if (this.$element.parent().hasClass(this.containingClass)) {
-          this.$element.parent(this.containingClass).find(this.addOnClass).on({
+          this.$element.parent(this.containingClass).find(this.addOnSelector).on({
             'click.timepicker': $.proxy(this.showWidget, this)
           });
           this.$element.on({
