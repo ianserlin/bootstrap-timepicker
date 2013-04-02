@@ -27,8 +27,8 @@
     this.showSeconds = options.showSeconds;
     this.template = options.template;
     this.appendWidgetTo = options.appendWidgetTo;
-    this.containingClass = options.containingSelector || '.input-group';
-    this.addOnClass = options.addOnSelector || '.input-group-addon';
+    this.containingSelector = options.containingSelector || '.input-group';
+    this.addOnSelector = options.addOnSelector || '.input-group-addon';
 
     this._init();
   };
